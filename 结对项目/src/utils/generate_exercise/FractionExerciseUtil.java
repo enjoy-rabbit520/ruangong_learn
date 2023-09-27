@@ -43,7 +43,7 @@ public class FractionExerciseUtil {
             // 一个运算符的情况下
             if (b != 0 && d!= 0&& num == 0){
                 if (operator1 == 0){
-                    exercise[++count] = a + "/" + b + " + " + c + "/" + d + "=";
+                    exercise[++count] = a + "/" + b + " + " + c + "/" + d + " =";
                     // 存储临时值，方便化简
                     sum = a * d + b * c;
                     b = b * d;
@@ -57,7 +57,7 @@ public class FractionExerciseUtil {
                     }
                 } else if (operator1 == 1) {
                     if ((a/b) > (c/d)){
-                        exercise[++count] = a + "/" + b + " - " + c + "/" + d + "=";
+                        exercise[++count] = a + "/" + b + " - " + c + "/" + d + " =";
                         // 储存临时值，方便化简
                         sum = a * d - b * c;
                         b *= d;
@@ -68,7 +68,7 @@ public class FractionExerciseUtil {
                         }
                     }
                 } else if (operator1 == 2) {
-                    exercise[++count] = a + "/" + b + " * " + c + "/" + d + "=";
+                    exercise[++count] = a + "/" + b + " * " + c + "/" + d + " =";
                     // 储存临时值，方便化简
                     sum = a * c;
                     b *= d;
@@ -82,7 +82,7 @@ public class FractionExerciseUtil {
                     if (c == 0){
                         continue;
                     }
-                    exercise[++count] = a + "/" + b + " ÷ " + c + "/" + d;
+                    exercise[++count] = a + "/" + b + " ÷ " + c + "/" + d + " =";
                     sum = a * d;
                     b *= c;
                     if (sum > b){
@@ -104,8 +104,8 @@ public class FractionExerciseUtil {
                             results[count] = FractionUtil.simplifiedFraction(sum,b);
                         }
                     } else if (operator2 == 1) {
-                        // TODO 为了简单起见，没有结果为负数的
-                        if (a/b + c/d + e/f > 0){
+                        // TODO 保证不会生成结果为负数的题目
+                        if (a/b + c/d - e/f > 0){
                             exercise[++count] = a + "/" + b + " + " + c + "/" + d + " - " + e + "/" + f + " =";
                             sum = a*d*f + c*b*f + e*b*d;
                             b = b * d * f;
