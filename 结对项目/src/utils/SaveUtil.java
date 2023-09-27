@@ -69,7 +69,7 @@ public class SaveUtil {
             fos = new FileOutputStream(file);
             osw = new OutputStreamWriter(fos);
             bw = new BufferedWriter(osw);
-            for (int i = 1; i < answer.length - 1; i++) {
+            for (int i = 1; i < answer.length; i++) {
                 // 转化为两位小数
                 format = new BigDecimal(answer[i]);
                 result = format.setScale(2,BigDecimal.ROUND_HALF_UP).doubleValue();
@@ -115,7 +115,7 @@ public class SaveUtil {
             fos = new FileOutputStream(file);
             osw = new OutputStreamWriter(fos);
             bw = new BufferedWriter(osw);
-            for (int i = 1; i < exercise.length - 1; i++) {
+            for (int i = 1; i < exercise.length; i++) {
                 bw.write(i+".四则运算题目"+i+": "+exercise[i]+"\n");
             }
         } catch (IOException e) {
