@@ -63,20 +63,20 @@ public class MarkUtil {
             System.out.println("Correct:"+correct+"(");
             for (int j = 0; j < t ; j++) {
                 if (j == t-1){
-                    System.out.println(correctAnswer[i]);
+                    System.out.println(correctAnswer[j]);
                     continue;
                 }
-                System.out.print(correctAnswer[i]+",");
+                System.out.print(correctAnswer[j]+",");
             }
             System.out.print(")");
             System.out.println();
             System.out.print("Wrong:"+error+"(");
             for (int j = 0; j < s; j++) {
                 if (j == s-1){
-                    System.out.print(wrongAnswer[i]);
+                    System.out.print(wrongAnswer[j]);
                     continue;
                 }
-                System.out.println(wrongAnswer[i]+",");
+                System.out.println(wrongAnswer[j]+",");
             }
             System.out.print(")");
             System.out.println();
