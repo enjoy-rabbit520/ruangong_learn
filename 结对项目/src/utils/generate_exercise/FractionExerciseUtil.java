@@ -28,9 +28,9 @@ public class FractionExerciseUtil {
         // 随机运算符：+ - * /,
         // 0表示+, 1表示-, 2表示*, 3表示/
         while (count<=n){
-            operator1 = (int) (Math.random()) * 4;
-            operator2 = (int) (Math.random()) * 4;
-            operator3 = (int) (Math.random()) * 4;
+            operator1 = (int) (Math.random()*4);
+            operator2 = (int) (Math.random()*4);
+            operator3 = (int) (Math.random()*4);
             a = (int) (Math.random() * x);
             b = (int) (Math.random() * x);
             c = (int) (Math.random() * x);
