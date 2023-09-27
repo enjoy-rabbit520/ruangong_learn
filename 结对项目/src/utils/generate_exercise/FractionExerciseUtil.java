@@ -125,7 +125,7 @@ public class FractionExerciseUtil {
                             results[count] = FractionUtil.simplifiedFraction(sum,b);
                         }
                     } else if (operator3 == 3 && e != 0) {
-                        exercise[++count] = a + "/" + b + " + " + c + "/" + d + " + " + e + "÷" + f + " =";
+                        exercise[++count] = a + "/" + b + " + " + c + "/" + d + " + " + e + " ÷ " + f + " =";
                         sum = a*d*e + b*c*f;
                         b = b * d * e;
                         if (sum > b){
